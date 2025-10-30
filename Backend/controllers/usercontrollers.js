@@ -71,7 +71,7 @@ exports.forgotPassword = async (req, res) => {
       await user.save()
   
       // Instead of frontend link, just show token in response (for Postman)
-      const resetLink = `http://localhost:5177/reset-password?token=${rawToken}&email=${encodeURIComponent(user.email)}`;
+      const resetLink = `https://wellness-tracker-mu.vercel.app/reset-password?token=${rawToken}&email=${encodeURIComponent(user.email)}`;
   
       console.log("Password Reset Link (Postman):", resetLink)
   
